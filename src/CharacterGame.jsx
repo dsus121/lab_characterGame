@@ -36,20 +36,26 @@ function handleTakeDamage() {
 }
 }
 
+// adds a random item to the inventory
 function handleCollectItem() {
-  if (character.inventory >= 100) {
-    setCharacter ({... character, inventory : character.inventory + "🥪"})
+  const items = [ "🥪", "🥤", "🕶", "🐏","☄️", "🎲" ]
+  const item = items[Math.floor(Math.random() * items.length)];
+  setCharacter (prev => ({... prev, inventory : [...prev.inventory, item]}));
     } 
   
-}
+
 
 function handleReset() {
-  if (character.experience >= 100) {
-    setCharacter ({... character, level : character.level + 1})
-    } 
-  
-}
+    setCharacter({
+      name: "Hero Priyanka",
+      level: 1,
+      experience: 0,
+      health: 100,
+      inventory: []
+    });
 
+
+  } // closing brace for the larger function
 
 
   function generateRandomNum(min, max) {
@@ -63,11 +69,23 @@ function handleReset() {
       <p>{character.experience}</p>
       <p>{character.health}</p>
       <p>{character.inventory}</p>
-        <button className="button" onClick={gainXp}>Gain XP</button>
-        <button onClick={handleLevelUp}>Level UP - this should be auto!</button>
-        <button onClick={handleTakeDamage}>Take Damage</button>
-        <button onClick={handleCollectItem}>Collect Item</button>
-        <button onClick={handleReset}>Reset</button>
+      <div className="button-container">
+        <button className="button" onClick={gainXp}>
+          Gain XP
+        </button>
+        <button className="button" onClick={handleLevelUp}>
+          Level UP!
+        </button>
+        <button className="button" onClick={handleTakeDamage}>
+          Take Damage
+        </button>
+        <button className="button" onClick={handleCollectItem}>
+          Collect Item
+        </button>
+        <button className="button" onClick={handleReset}>
+          Reset
+        </button>
+      </div>
     </div>
   );
 }
