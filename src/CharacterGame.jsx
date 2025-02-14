@@ -65,10 +65,10 @@ function handleReset() {
   return (
     <div>
       <h1>{character.name}</h1>
-      <p>{character.level}</p>
-      <p>{character.experience}</p>
-      <p>{character.health}</p>
-      <p>{character.inventory}</p>
+      <h2>Level - {character.level}</h2>
+      <h2>Experience - {character.experience}</h2>
+      <h2>Health - {character.health}</h2>
+      <h2>{character.inventory}</h2>
       <div className="button-container">
         <button className="button" onClick={gainXp}>
           Gain XP
