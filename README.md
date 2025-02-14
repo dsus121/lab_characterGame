@@ -4,7 +4,7 @@
 Worked with Priyanka, Fouad, and Stephanie
 
 ## Implementation / Thoughts
-I still have performance anxiety when "driving", but my team was incredibly patient and helpful this afternoon. I need to master the syntax of tenary statements, and not freak out over 
+I still have performance anxiety when "driving", but my team was incredibly patient and helpful this afternoon. I need to master the syntax of ternary statements, and not freak out over 
 
 ## Objective:
 
